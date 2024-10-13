@@ -43,7 +43,7 @@
   <div class="d-flex header">
 	<nav class="navbar navbar-expand-lg pt-2 pb-4 navigation header-padding " id="navbar">
 		<div class="container-fluid">
-		  <a class="navbar-brand" href="index.html">
+		  <a class="navbar-brand" href="{{ url('/') }}">
 		  	<img src="{{ url('logo.svg') }}" alt="" width="300px" class="img-fluid">
 		  </a>
 
@@ -54,7 +54,7 @@
 		  <div class="collapse navbar-collapse text-center" id="navbarsExample09">
 			<ul class="navbar-nav m-auto">
 			  <li class="nav-item active">
-				<a class="nav-link" href="index.html">HOME <span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="{{ url('/') }}">HOME <span class="sr-only">(current)</span></a>
 			  </li>
 			   <li class="nav-item"><a class="nav-link" href="#"> ABOUT US </a></li>
 			   <li class="nav-item"><a class="nav-link" href="#"> PROUD ALUMNI </a></li>
@@ -64,7 +64,7 @@
 
 			</ul>
 
-			<a href="contact.html" class="btn btn-solid-border d-none d-lg-block">Become a Member <i class="fa fa-angle-right ml-2"></i></a>
+			<a href="{{ url('register') }}" class="btn btn-solid-border d-none d-lg-block">Become a Member <i class="fa fa-angle-right ml-2"></i></a>
 		  </div>
 		</div>
 	</nav>

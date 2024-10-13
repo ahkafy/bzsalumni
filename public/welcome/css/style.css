@@ -1593,3 +1593,8 @@ ul.dropdown-menu li {
   color: #FF715B;
 }
 /*# sourceMappingURL=style.css.map */
+
+.container-fluid{
+    padding-left:100px;
+    padding-right:100px;
+}
