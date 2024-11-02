@@ -61,12 +61,12 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="dob" class="col-md-4 col-form-label text-md-end">{{ __('Date of Birth') }}</label>
+                            <label for="date_of_birth" class="col-md-4 col-form-label text-md-end">{{ __('Date of Birth') }}</label>
 
                             <div class="col-md-6">
-                                <input id="dob" type="dob" class="form-control @error('dob') is-invalid @enderror" name="dob" value="{{ old('dob') }}" required autocomplete="dob">
+                                <input id="date_of_birth" type="date" class="form-control @error('date_of_birth') is-invalid @enderror" name="date_of_birth" value="{{ old('date_of_birth') }}" required autocomplete="date_of_birth">
 
-                                @error('dob')
+                                @error('date_of_birth')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -75,12 +75,21 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="address" class="col-md-4 col-form-label text-md-end">{{ __('Blood Group') }}</label>
+                            <label for="blood_group" class="col-md-4 col-form-label text-md-end">{{ __('Blood Group') }}</label>
 
                             <div class="col-md-6">
-                                <input id="address" type="address" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address">
-
-                                @error('address')
+                                <select id="blood_group" type="blood_group" class="form-control @error('blood_group') is-invalid @enderror" name="blood_group" value="{{ old('blood_group') }}" required autocomplete="blood_group">
+                                    <option value="">SELECT BLOOG GROUP</option>
+                                    <option value="A Positive">A Positive</option>
+                                    <option value="A Positive">A Negative</option>
+                                    <option value="A Positive">B Positive</option>
+                                    <option value="A Positive">B Negative</option>
+                                    <option value="A Positive">AB Positive</option>
+                                    <option value="A Positive">AB Negative</option>
+                                    <option value="A Positive">O Positive</option>
+                                    <option value="A Positive">O Negative</option>
+                                </select>
+                                @error('blood_group')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -126,8 +135,12 @@
                             <label for="batch" class="col-md-4 col-form-label text-md-end">{{ __('Batch') }}</label>
 
                             <div class="col-md-6">
-                                <input id="batch" type="batch" class="form-control @error('batch') is-invalid @enderror" name="batch" value="{{ old('batch') }}" required autocomplete="batch">
-
+                                <select id="batch" type="batch" class="form-control @error('batch') is-invalid @enderror" name="batch" value="{{ old('batch') }}" required autocomplete="batch">
+                                    @for($x=1970;$x<=2025;$x++){
+                                        <option value="{{ $x }}">{{ $x }}</option>
+                                    }
+                                    @endfor
+                                </select>
                                 @error('batch')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -138,12 +151,12 @@
 
 
                         <div class="row mb-3">
-                            <label for="admission" class="col-md-4 col-form-label text-md-end">{{ __('Admission Year') }}</label>
+                            <label for="admission_year" class="col-md-4 col-form-label text-md-end">{{ __('Admission Year') }}</label>
 
                             <div class="col-md-6">
-                                <input id="admission" type="admission" class="form-control @error('admission') is-invalid @enderror" name="admission" value="{{ old('admission') }}" required autocomplete="admission">
+                                <input id="admission_year" type="admission_year" class="form-control @error('admission_year') is-invalid @enderror" name="admission_year" value="{{ old('admission_year') }}" required autocomplete="admission_year">
 
-                                @error('admission')
+                                @error('admission_year')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -168,12 +181,12 @@
 
 
                         <div class="row mb-3">
-                            <label for="result" class="col-md-4 col-form-label text-md-end">{{ __('SSC Result') }}</label>
+                            <label for="ssc_result" class="col-md-4 col-form-label text-md-end">{{ __('SSC Result') }}</label>
 
                             <div class="col-md-6">
-                                <input id="result" type="result" class="form-control @error('result') is-invalid @enderror" name="result" value="{{ old('result') }}" required autocomplete="result">
+                                <input id="ssc_result" type="ssc_result" class="form-control @error('ssc_result') is-invalid @enderror" name="ssc_result" value="{{ old('ssc_result') }}" required autocomplete="ssc_result">
 
-                                @error('result')
+                                @error('ssc_result')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -186,12 +199,12 @@
                         <hr>
 
                         <div class="row mb-3">
-                            <label for="cocu" class="col-md-4 col-form-label text-md-end">{{ __('Co Curricular Activities and Achievements (if any) ') }}</label>
+                            <label for="co_curricular_activities" class="col-md-4 col-form-label text-md-end">{{ __('Co Curricular Activities and Achievements (if any) ') }}</label>
 
                             <div class="col-md-6">
-                                <input id="cocu" type="cocu" class="form-control @error('cocu') is-invalid @enderror" name="cocu" value="{{ old('cocu') }}" required autocomplete="cocu">
+                                <input id="co_curricular_activities" type="co_curricular_activities" class="form-control @error('co_curricular_activities') is-invalid @enderror" name="co_curricular_activities" value="{{ old('co_curricular_activities') }}" required autocomplete="co_curricular_activities">
 
-                                @error('cocu')
+                                @error('co_curricular_activities')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

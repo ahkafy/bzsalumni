@@ -14,8 +14,18 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('phone')->unique();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('date_of_birth');
+            $table->string('blood_group');
+            $table->string('address');
+            $table->string('facebook');
+            $table->string('batch');
+            $table->string('admission_year');
+            $table->string('section');
+            $table->string('ssc_result');
+            $table->string('co_curricular_activities');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

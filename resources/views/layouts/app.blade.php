@@ -36,15 +36,15 @@
 
 <body>
 
-  <div class="d-flex flex-row-reverse container-fluid header-padding">
+  <div class="d-flex flex-row-reverse container-fluid header-padding" style="background:#f0f0f0">
     <a href="#" class="mr-2 btn btn-light btn-sm" style="border: 1px solid #ddd">Blood Bank</a>
     <a href="#" class="mr-2 btn btn-light btn-sm"  style="border: 1px solid #ddd">Job Network</a>
   </div>
-  <div class="d-flex header">
+  <div class="d-flex header"  style="background:#f0f0f0">
 	<nav class="navbar navbar-expand-lg pt-2 pb-4 navigation header-padding " id="navbar">
 		<div class="container-fluid">
 		  <a class="navbar-brand" href="{{ url('/') }}">
-		  	<img src="{{ url('logo.svg') }}" alt="" width="300px" class="img-fluid">
+		  	<img src="{{ url('logo.png') }}" alt="" width="300px" class="img-fluid">
 		  </a>
 
 		  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">

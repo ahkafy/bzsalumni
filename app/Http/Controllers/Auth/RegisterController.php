@@ -50,7 +50,17 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'phone' => ['required', 'string', 'max:255', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'date_of_birth' => ['required', 'string'],
+            'blood_group' => ['required', 'string'],
+            'address' => ['required', 'string'],
+            'facebook' => ['required', 'string'],
+            'batch' => ['required', 'string'],
+            'admission_year' => ['required', 'string'],
+            'section' => ['required', 'string'],
+            'ssc_result' => ['required', 'string'],
+            'co_curricular_activities' => ['required', 'string'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -65,7 +75,17 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
+            'phone' => $data['phone'],
             'email' => $data['email'],
+            'date_of_birth' => $data['date_of_birth'],
+            'blood_group' => $data['blood_group'],
+            'address' => $data['address'],
+            'facebook' => $data['facebook'],
+            'batch' => $data['batch'],
+            'admission_year' => $data['admission_year'],
+            'section' => $data['section'],
+            'ssc_result' => $data['ssc_result'],
+            'co_curricular_activities' => $data['co_curricular_activities'],
             'password' => Hash::make($data['password']),
         ]);
     }
